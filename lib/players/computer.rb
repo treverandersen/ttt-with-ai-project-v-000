@@ -1,7 +1,7 @@
 require 'pry'
 module Players
   class Computer < Player
-
+  
   WIN_COMBINATIONS = [
     [0, 1, 2],
     [3, 4, 5],
@@ -31,7 +31,6 @@ module Players
     	winning_combo = WIN_COMBINATIONS.find do |combo|
     		tokens = combo.map { |space| board.cells[space] }
     		tokens.count { |token| token == self.token } == 2
-
     	end
       if winning_combo
       	winning_combo.find do |space|
